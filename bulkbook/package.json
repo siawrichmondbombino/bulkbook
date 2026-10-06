@@ -1,0 +1,24 @@
+{
+  "name": "bulkbook",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Stock, sales, receipts and borrowers for a wholesale shop. Cloudflare Worker + Supabase + Clerk.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test:worker": "node tests/worker.test.mjs",
+    "test:sql": "node tests/sql.test.cjs",
+    "test:e2e": "node tests/e2e.test.cjs",
+    "check:live": "node scripts/check-live.mjs",
+    "backup": "sh scripts/backup.sh"
+  },
+  "dependencies": {
+    "@clerk/backend": "^3.22.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0",
+    "pg": "^8.0.0",
+    "jsdom": "^26.0.0"
+  }
+}

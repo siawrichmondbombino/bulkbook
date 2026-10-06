@@ -1,0 +1,15 @@
+# Copy this file to .dev.vars for local testing (npx wrangler dev). NEVER commit .dev.vars.
+# For the live site, set each one with:  npx wrangler secret put NAME
+
+# Public keys (safe to show in the browser, but kept here so they are not hard-coded)
+CLERK_PUBLISHABLE_KEY=pk_test_xxxxxxxxxxxxxxxxxxxxxxxx
+SUPABASE_URL=https://xxxxxxxxxxxx.supabase.co
+SUPABASE_PUBLISHABLE_KEY=sb_publishable_xxxxxxxxxxxxxxxxxxxx
+
+# SECRET keys (server only, never in the browser)
+CLERK_SECRET_KEY=sk_test_xxxxxxxxxxxxxxxxxxxxxxxx
+SUPABASE_SERVICE_ROLE_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+# The exact web address of the site, no trailing slash. Used to make login tokens only valid for this site.
+# Local: http://localhost:8787     Live: https://bulkbook.YOUR-NAME.workers.dev
+APP_ORIGIN=http://localhost:8787
