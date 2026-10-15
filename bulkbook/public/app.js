@@ -1,12 +1,4 @@
-/* Bulkbook browser app.
- *
- * Login: Clerk. Data: Supabase, called with the Clerk login token, so the database's row-level security
- * decides what each person may see. All changes go through database functions (see database/schema.sql),
- * which recompute prices and totals on the server. This file never holds a secret key: it only receives the
- * PUBLIC settings from /api/config. Creating and deleting employee logins goes through the server (/api/staff).
- *
- * Test seam: tests may set window.__BB_DEPS__ = { fetch, clerk, createClient } before this file loads.
- */
+
 (function () {
 "use strict";
 
